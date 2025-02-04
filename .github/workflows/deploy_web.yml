@@ -1,0 +1,38 @@
+name: Deploy Flutter Web
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * 1'
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.[0-9]+*'
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: 🛠 Setup Flutter (includes Dart)
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: stable
+
+      - name: 🚀 Run generate_apps_json.dart to create apps.json
+        run: dart ./scripts/generate_apps_json.dart
+
+      - name: 📦 Install Dependencies
+        run: flutter pub get
+
+      - name: 🏗 Build Flutter Web
+        run: flutter build web --release
+
+      - name: 🚀 Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: build/web
+          clean: true
