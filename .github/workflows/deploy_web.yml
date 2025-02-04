@@ -21,11 +21,11 @@ jobs:
         with:
           channel: stable
 
-      - name: 🚀 Run generate_apps_json.dart to create apps.json
-        run: dart ./scripts/generate_apps_json.dart
-
       - name: 📦 Install Dependencies
         run: flutter pub get
+
+      - name: 🚀 Run generate_apps_json.dart to create apps.json
+        run: dart ./scripts/generate_apps_json.dart
 
       - name: 🏗 Build Flutter Web
         run: flutter build web --release
