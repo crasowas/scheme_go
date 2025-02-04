@@ -27,11 +27,11 @@ jobs:
       - name: 📦 Install Dependencies
         run: flutter pub get
 
-      - name: 🏗 Build Flutter Web
-        run: flutter build web --release
-
       - name: 📄 Generate apps.json
         run: dart ./scripts/generate_apps_json.dart
+
+      - name: 🏗 Build Flutter Web
+        run: flutter build web --release
 
       - name: 📄 Copy CNAME file
         run: cp CNAME build/web/CNAME
