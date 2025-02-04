@@ -1,0 +1,27 @@
+[
+  {
+    "appId": "1142110895",
+    "schemes": [
+      {
+        "scheme": "snssdk1128://",
+        "shortcut": "https://www.icloud.com/shortcuts/e182418cb1d44d6a82c6d60efedaf98f",
+        "desc": ""
+      }
+    ],
+    "appName": "抖音",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/0b/7c/570b7c1a-e3ac-6f2c-ade4-1841b4640da3/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/100x100bb.jpg",
+    "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/57/0b/7c/570b7c1a-e3ac-6f2c-ade4-1841b4640da3/AppIcon-0-0-1x_U007emarketing-0-6-0-0-85-220.png/512x512bb.jpg"
+  },
+  {
+    "appId": "737310995",
+    "schemes": [
+      {
+        "scheme": "meituanwaimai://",
+        "shortcut": "https://www.icloud.com/shortcuts/a74b1408cb9d496395619480a7046dbd"
+      }
+    ],
+    "appName": "美团外卖",
+    "artworkUrl100": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/31/18/be/3118bec8-9f2d-01d6-9407-d83ceefdbb05/AppIcon-0-0-1x_U007epad-0-0-0-sRGB-85-220.png/100x100bb.jpg",
+    "artworkUrl512": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/31/18/be/3118bec8-9f2d-01d6-9407-d83ceefdbb05/AppIcon-0-0-1x_U007epad-0-0-0-sRGB-85-220.png/512x512bb.jpg"
+  }
+]
