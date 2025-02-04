@@ -19,7 +19,7 @@ jobs:
       - name: 🛠 Setup Flutter (includes Dart)
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: stable
+          channel: stable
 
       - name: 🚀 Run generate_apps_json.dart to create apps.json
         run: dart ./scripts/generate_apps_json.dart
