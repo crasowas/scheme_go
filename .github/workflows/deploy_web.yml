@@ -17,7 +17,7 @@ jobs:
 
     steps:
       - name: 📥 Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: 🛠 Setup Flutter (includes Dart)
         uses: subosito/flutter-action@v2
@@ -27,11 +27,14 @@ jobs:
       - name: 📦 Install Dependencies
         run: flutter pub get
 
-      - name: 🚀 Run generate_apps_json.dart to create apps.json
-        run: dart ./scripts/generate_apps_json.dart
-
       - name: 🏗 Build Flutter Web
         run: flutter build web --release
+
+      - name: 📄 Generate apps.json
+        run: dart ./scripts/generate_apps_json.dart
+
+      - name: 📄 Copy CNAME file
+        run: cp CNAME build/web/CNAME
 
       - name: 🚀 Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
