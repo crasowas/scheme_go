@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: '',
         colorScheme: ColorScheme.light(
           primary: Colors.white,
         ),

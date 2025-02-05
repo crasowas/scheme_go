@@ -9,6 +9,7 @@ import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 import '../models/app_model.dart';
 import '../services/api_service.dart';
+import '../utils/url_launcher_util.dart';
 import '../widgets/app_card_widget.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,6 +20,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  static const String title = 'Scheme Go!';
+  static const String githubLogoUrl =
+      'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
+  static const String githubProjectUrl = 'https://github.com/crasowas/scheme_go';
   final TextEditingController _searchController = TextEditingController();
   List<AppModel> _apps = [];
   List<AppModel> _filteredApps = [];
@@ -68,10 +73,8 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        title: const Text(
-          'Scheme Go!',
-          style: TextStyle(color: Colors.green, fontStyle: FontStyle.italic),
-        ),
+        title: _buildTitle(),
+        titleSpacing: 8,
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(48),
           child: Padding(
@@ -120,6 +123,38 @@ class _HomePageState extends State<HomePage> {
         ),
       ),
       body: _buildContent(),
+    );
+  }
+
+  Widget _buildTitle() {
+    return Stack(
+      children: <Widget>[
+        Positioned.fill(
+          child: Center(
+            child: Text(
+              title,
+              style:
+                  TextStyle(color: Colors.green, fontStyle: FontStyle.italic),
+            ),
+          ),
+        ),
+        Align(
+          alignment: Alignment.centerRight,
+          child: IconButton(
+            icon: Image.network(
+              githubLogoUrl,
+              width: 36,
+              height: 36,
+            ),
+            splashColor: Colors.transparent,
+            highlightColor: Colors.transparent,
+            hoverColor: Colors.transparent,
+            onPressed: () {
+              UrlLauncherUtil.openUrl(githubProjectUrl, newTab: true);
+            },
+          ),
+        )
+      ],
     );
   }
 
