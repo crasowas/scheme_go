@@ -1,8 +1,8 @@
-# Scheme Go
+# scheme_go
 
-一个简单的Web项目，收集了一些网上公开的URL Scheme以及一些分享的快捷指令用于测试APP跳转。
+一个简单的Web项目，收集了一些网上公开的URL Scheme以及分享的快捷指令用于测试APP唤起。
 
-在线页面：[Scheme Go](https://crasowas.dev/scheme-go)
+在线页面：[Scheme Go](https://sg.crasowas.dev)
 
 ## 跳过开屏广告
 
@@ -16,7 +16,7 @@ scheme://
 
 是不是感觉这东西你天天见，很像`https://`形式，那还真有一点点区别，`https://`这种是标准的Scheme，而**URL Scheme本质指的是自定义Scheme**。
 
-例如你现在打算开发一个iOS应用叫`ABC`，然后想支持其他应用或应用内部像URL一样跳转解析，这时你就可以自定义属于`ABC`应用的Scheme，简单点就叫`abc`，需要在`Info.plist`文件中注册URL Scheme：
+假如你现在打算开发一个iOS应用叫`ABC`，然后想支持其他应用或应用内部像URL一样跳转解析，这时你就可以自定义属于`ABC`应用的Scheme，简单点就叫`abc`，需要在`Info.plist`文件中注册URL Scheme：
 
 ```text
 <key>CFBundleURLTypes</key>
@@ -36,4 +36,31 @@ scheme://
 
 通过它唤起应用会走专门的回调方法处理，总不能用户分享/支付跳转过来先在这回调里给用户加载一个广告吧，所以绝大部分应用都只是在正常冷/热启动时加载开屏广告，这就是为什么这种方式唤起应用一般没开屏广告。
 
-**但是话又说回来，这广告还不是想加就加，所以只能是有一定的可行性。**
+**但是话又说回来，这广告还不是想加就加，所以只能说有一定的可行性。**
+
+## 完善APP数据
+
+欢迎大家一起完善收录的APP数据👏，以下是常见的贡献方式：
+
+1. 在项目下的[apps_data.json](https://github.com/crasowas/scheme_go/blob/main/apps_data.json)文件中追加新的APP数据，然后提PR。APP数据格式如下：
+
+```json
+{
+  "appId": "应用id（必填）",
+  "schemes": [
+    {
+      "scheme": "URL Scheme（必填）",
+      "shortcut": "快捷指令分享链接（可选）",
+      "desc": "额外描述，用于区分多个Scheme（可选）"
+    }
+  ]
+}
+```
+
+如果有开发环境，建议修改后在项目根目录运行以下命令：
+
+```shell
+dart run ./scripts/generate_apps_json.dart
+```
+
+检查自动生成的`web/apps.json`文件中，新增的APP数据是否正确。
