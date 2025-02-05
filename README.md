@@ -40,9 +40,11 @@ scheme://
 
 ## 完善APP数据
 
-欢迎大家一起完善收录的APP数据👏，以下是常见的贡献方式：
+欢迎大家一起完善收录的APP数据👏，以下是常见的两种贡献方式：
 
-1. 在项目下的[apps_data.json](https://github.com/crasowas/scheme_go/blob/main/apps_data.json)文件中追加新的APP数据，然后提PR。APP数据格式如下：
+1. **提个[issue](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)（推荐）。**
+
+2. **在项目下的[apps_data.json](https://github.com/crasowas/scheme_go/blob/main/apps_data.json)文件中追加新的APP数据，然后提PR。** APP数据格式如下：
 
 ```json
 {
