@@ -4,8 +4,7 @@
     "schemes": [
       {
         "scheme": "snssdk1128://",
-        "shortcut": "https://www.icloud.com/shortcuts/e182418cb1d44d6a82c6d60efedaf98f",
-        "desc": ""
+        "shortcut": "https://www.icloud.com/shortcuts/e483b4f6efab4942b9dbab7c02661655"
       }
     ]
   },
@@ -14,7 +13,615 @@
     "schemes": [
       {
         "scheme": "meituanwaimai://",
-        "shortcut": "https://www.icloud.com/shortcuts/a74b1408cb9d496395619480a7046dbd"
+        "shortcut": "https://www.icloud.com/shortcuts/700fa32ddb3c45029279d3f93cf34636"
+      }
+    ]
+  },
+  {
+    "appId": "590338362",
+    "schemes": [
+      {
+        "scheme": "orpheuswidget://",
+        "shortcut": "https://www.icloud.com/shortcuts/d434595246f943edbde4257ce6a33542"
+      }
+    ]
+  },
+  {
+    "appId": "350962117",
+    "schemes": [
+      {
+        "scheme": "sinaweibo://",
+        "shortcut": "https://www.icloud.com/shortcuts/c7784d347f0f43bba73038c39dc5a5fd"
+      }
+    ]
+  },
+  {
+    "appId": "477927812",
+    "schemes": [
+      {
+        "scheme": "com.baidu.tieba://",
+        "shortcut": "https://www.icloud.com/shortcuts/c05e5fefdd9a425db001daf35e26e8de"
+      }
+    ]
+  },
+  {
+    "appId": "510909506",
+    "schemes": [
+      {
+        "scheme": "fleamarket://",
+        "shortcut": "https://www.icloud.com/shortcuts/5222226ae5f04cb09f729d092836f056"
+      }
+    ]
+  },
+  {
+    "appId": "554499054",
+    "schemes": [
+      {
+        "scheme": "diditaxi://",
+        "shortcut": "https://www.icloud.com/shortcuts/93b0467a8c5a47768b1c6bd2aa26fab6"
+      }
+    ]
+  },
+  {
+    "appId": "557545298",
+    "schemes": [
+      {
+        "scheme": "baicizhanios://",
+        "shortcut": "https://www.icloud.com/shortcuts/7ecdb8cae1354dd3880a3cc5900505e6"
+      }
+    ]
+  },
+  {
+    "appId": "529092160",
+    "schemes": [
+      {
+        "scheme": "snssdk141:// ",
+        "shortcut": "https://www.icloud.com/shortcuts/94cb97db85654eff926d195601d36e01"
+      }
+    ]
+  },
+  {
+    "appId": "605670941",
+    "schemes": [
+      {
+        "scheme": "baidufanyi:// ",
+        "shortcut": "https://www.icloud.com/shortcuts/5f29cd74e8b1478b86aa76f5269ba679"
+      }
+    ]
+  },
+  {
+    "appId": "333206289",
+    "schemes": [
+      {
+        "scheme": "alipays://",
+        "shortcut": "https://www.icloud.com/shortcuts/abcab4a193bc47cfae43c0d5d245a35f"
+      }
+    ]
+  },
+  {
+    "appId": "534174796",
+    "schemes": [
+      {
+        "scheme": "qidian://",
+        "shortcut": "https://www.icloud.com/shortcuts/d8ea654d4dae487aad0ac443bbd2369e"
+      }
+    ]
+  },
+  {
+    "appId": "871095743",
+    "schemes": [
+      {
+        "scheme": "yykiwi://",
+        "shortcut": "https://www.icloud.com/shortcuts/5ce67a06dbf84712860964d9f554ce1e"
+      }
+    ]
+  },
+  {
+    "appId": "1099174257",
+    "schemes": [
+      {
+        "scheme": "physicalfitness:// ",
+        "shortcut": "https://www.icloud.com/shortcuts/359bd178da4e4413ae04441f349cea44"
+      }
+    ]
+  },
+  {
+    "appId": "1034242836",
+    "schemes": [
+      {
+        "scheme": "shiftassistant:// ",
+        "shortcut": "https://www.icloud.com/shortcuts/096f99b87d524adf9cc2cca8113e8a21"
+      }
+    ]
+  },
+  {
+    "appId": "388627783",
+    "schemes": [
+      {
+        "scheme": "camscanner://",
+        "shortcut": "https://www.icloud.com/shortcuts/64c30fc1ba3e4ef69a42493eb75e2fe2"
+      }
+    ]
+  },
+  {
+    "appId": "440948110",
+    "schemes": [
+      {
+        "scheme": "kwai://",
+        "shortcut": "https://www.icloud.com/shortcuts/f1923f895e844cc3b3e2fa160826ce3a"
+      }
+    ]
+  },
+  {
+    "appId": "741292507",
+    "schemes": [
+      {
+        "scheme": "xhsdiscover://",
+        "shortcut": "https://www.icloud.com/shortcuts/7c3aee3022984d22a4aed1eea40be97e"
+      }
+    ]
+  },
+  {
+    "appId": "414245413",
+    "schemes": [
+      {
+        "scheme": "openapp.jdmobile://",
+        "shortcut": "https://www.icloud.com/shortcuts/ab6b02abe1844aae9f65042690338b02"
+      },
+      {
+        "scheme": "openjd://",
+        "shortcut": "https://www.icloud.com/shortcuts/383eee6e883a48cf87edc7f4d0227efe",
+        "desc": "和 openapp.jdmobile:// 效果一样"
+      }
+    ]
+  },
+  {
+    "appId": "487608658",
+    "schemes": [
+      {
+        "scheme": "uniteqqreader://nativepage/",
+        "shortcut": "https://www.icloud.com/shortcuts/856654a7a01749edb881eadf8f9d186f"
+      }
+    ]
+  },
+  {
+    "appId": "942443472",
+    "schemes": [
+      {
+        "scheme": "zuiyou://",
+        "shortcut": "https://www.icloud.com/shortcuts/01dcc81b66164cd8b4514c7b6546a8b3"
+      }
+    ]
+  },
+  {
+    "appId": "583700738",
+    "schemes": [
+      {
+        "scheme": "cn.10086.app://",
+        "shortcut": "https://www.icloud.com/shortcuts/48e9aa33a7f940a697a26b231fb2d648"
+      }
+    ]
+  },
+  {
+    "appId": "564818797",
+    "schemes": [
+      {
+        "scheme": "cn.12306://",
+        "shortcut": "https://www.icloud.com/shortcuts/f26c71c873f748a097f7777df5aa30ae"
+      }
+    ]
+  },
+  {
+    "appId": "423084029",
+    "schemes": [
+      {
+        "scheme": "imeituan://",
+        "shortcut": "https://www.icloud.com/shortcuts/09b1060de5cc4773841667d4191be77b"
+      }
+    ]
+  },
+  {
+    "appId": "863882795",
+    "schemes": [
+      {
+        "scheme": "douyutv://",
+        "shortcut": "https://www.icloud.com/shortcuts/0b212bd1132b45dab59d3e0887af8720"
+      }
+    ]
+  },
+  {
+    "appId": "736536022",
+    "schemes": [
+      {
+        "scheme": "bilibili://",
+        "shortcut": "https://www.icloud.com/shortcuts/dd5d042b30914a92b753e4251e439759"
+      }
+    ]
+  },
+  {
+    "appId": "458318329",
+    "schemes": [
+      {
+        "scheme": "tenvideo://",
+        "shortcut": "https://www.icloud.com/shortcuts/2896c1aeb14741759267ff35512bfe9d"
+      }
+    ]
+  },
+  {
+    "appId": "336141475",
+    "schemes": [
+      {
+        "scheme": "youku://",
+        "shortcut": "https://www.icloud.com/shortcuts/9690f5722396488083dd9918fc9d60c8"
+      }
+    ]
+  },
+  {
+    "appId": "393765873",
+    "schemes": [
+      {
+        "scheme": "iqiyi://",
+        "shortcut": "https://www.icloud.com/shortcuts/78aa4bab816a4787a1de17566e3b5186"
+      }
+    ]
+  },
+  {
+    "appId": "351091731",
+    "schemes": [
+      {
+        "scheme": "dianping://",
+        "shortcut": "https://www.icloud.com/shortcuts/7cf5fe5de6ab4e86a1f9ae6a7cb2a1fe"
+      }
+    ]
+  },
+  {
+    "appId": "387682726",
+    "schemes": [
+      {
+        "scheme": "taobao://",
+        "shortcut": "https://www.icloud.com/shortcuts/d8598f660cc7491195f90febea6b2d79"
+      }
+    ]
+  },
+  {
+    "appId": "507161324",
+    "schemes": [
+      {
+        "scheme": "eleme://",
+        "shortcut": "https://www.icloud.com/shortcuts/d0bf02eef09b42ff811e9ca5e1b4b26c"
+      }
+    ]
+  },
+  {
+    "appId": "480079300",
+    "schemes": [
+      {
+        "scheme": "wbmain://",
+        "shortcut": "https://www.icloud.com/shortcuts/bf43397f94894ab982e306bb34679236"
+      }
+    ]
+  },
+  {
+    "appId": "1347663353",
+    "schemes": [
+      {
+        "scheme": "beike://",
+        "shortcut": "https://www.icloud.com/shortcuts/d017a386fd9745039c27345219c44c22"
+      }
+    ]
+  },
+  {
+    "appId": "414478124",
+    "schemes": [
+      {
+        "scheme": "wechat://",
+        "shortcut": "https://www.icloud.com/shortcuts/c644a5fe33824667827d06dc87730a61"
+      }
+    ]
+  },
+  {
+    "appId": "444934666",
+    "schemes": [
+      {
+        "scheme": "mqq://",
+        "shortcut": "https://www.icloud.com/shortcuts/47292314c00041a1966c090e81ad6c32"
+      }
+    ]
+  },
+  {
+    "appId": "448165862",
+    "schemes": [
+      {
+        "scheme": "momochat://",
+        "shortcut": "https://www.icloud.com/shortcuts/8232ea231ccd41818bccbd69ce5ca6ef"
+      }
+    ]
+  },
+  {
+    "appId": "718659370",
+    "schemes": [
+      {
+        "scheme": "maimai://",
+        "shortcut": "https://www.icloud.com/shortcuts/1797eff2232143a48fd7490b18e109d1"
+      }
+    ]
+  },
+  {
+    "appId": "452186370",
+    "schemes": [
+      {
+        "scheme": "baidumap://",
+        "shortcut": "https://www.icloud.com/shortcuts/759e342bd69b497da6823eef586e777d"
+      }
+    ]
+  },
+  {
+    "appId": "461703208",
+    "schemes": [
+      {
+        "scheme": "iosamap://",
+        "shortcut": "https://www.icloud.com/shortcuts/9366db8b00a645d891f7f2a4b84272d7"
+      }
+    ]
+  },
+  {
+    "appId": "1044283059",
+    "schemes": [
+      {
+        "scheme": "pinduoduo://",
+        "shortcut": "https://www.icloud.com/shortcuts/0459018361c04a079b1eede86533d261"
+      }
+    ]
+  },
+  {
+    "appId": "518966501",
+    "schemes": [
+      {
+        "scheme": "tmall://",
+        "shortcut": "https://www.icloud.com/shortcuts/0d6b7a7789b542cca79ccaf0c49f936e"
+      }
+    ]
+  },
+  {
+    "appId": "434209233",
+    "schemes": [
+      {
+        "scheme": "rm434209233MojiWeather://",
+        "shortcut": "https://www.icloud.com/shortcuts/33d3135967a34aef899c581f4e6ea729"
+      }
+    ]
+  },
+  {
+    "appId": "417200582",
+    "schemes": [
+      {
+        "scheme": "vipshop://",
+        "shortcut": "https://www.icloud.com/shortcuts/abd046f2e1424f52bc21c9011d9e4eec"
+      }
+    ]
+  },
+  {
+    "appId": "414603431",
+    "schemes": [
+      {
+        "scheme": "qqmusic://",
+        "shortcut": "https://www.icloud.com/shortcuts/9f58daab0c1148ae9bcca9532aaa8860"
+      }
+    ]
+  },
+  {
+    "appId": "472208016",
+    "schemes": [
+      {
+        "scheme": "kugouURL://",
+        "shortcut": "https://www.icloud.com/shortcuts/2a3539970561400dba994ee387d93fb6"
+      }
+    ]
+  },
+  {
+    "appId": "876336838",
+    "schemes": [
+      {
+        "scheme": "xmly://",
+        "shortcut": "https://www.icloud.com/shortcuts/71bb51e13e8444939815154096afcb39"
+      }
+    ]
+  },
+  {
+    "appId": "506685538",
+    "schemes": [
+      {
+        "scheme": "qtfmp://",
+        "shortcut": "https://www.icloud.com/shortcuts/a3378e6412424fa49459c1289fb5a878"
+      }
+    ]
+  },
+  {
+    "appId": "599852710",
+    "schemes": [
+      {
+        "scheme": "KingsoftOfficeApp://",
+        "shortcut": "https://www.icloud.com/shortcuts/0dad0b77e79d42c0bff2c6a4dda06f7f"
+      }
+    ]
+  },
+  {
+    "appId": "1484048379",
+    "schemes": [
+      {
+        "scheme": "meeting://",
+        "shortcut": "https://www.icloud.com/shortcuts/8ca7688cfc3e4083ae52448e91176434"
+      }
+    ]
+  },
+  {
+    "appId": "930368978",
+    "schemes": [
+      {
+        "scheme": "dingtalk://",
+        "shortcut": "https://www.icloud.com/shortcuts/99083c028c3c45238912b253a5c77b74"
+      }
+    ]
+  },
+  {
+    "appId": "803781859",
+    "schemes": [
+      {
+        "scheme": "zybang://",
+        "shortcut": "https://www.icloud.com/shortcuts/c16e028d06574be29d31eaa855a99290"
+      }
+    ]
+  },
+  {
+    "appId": "907002334",
+    "schemes": [
+      {
+        "scheme": "douban://",
+        "shortcut": "https://www.icloud.com/shortcuts/b1f36a2af21142ba864eebd5752adb89"
+      }
+    ]
+  },
+  {
+    "appId": "432274380",
+    "schemes": [
+      {
+        "scheme": "zhihu://",
+        "shortcut": "https://www.icloud.com/shortcuts/2553d3d1f25648319dcb1b08b6feaa54"
+      }
+    ]
+  },
+  {
+    "appId": "1458072671",
+    "schemes": [
+      {
+        "scheme": "jianying://",
+        "shortcut": "https://www.icloud.com/shortcuts/5d245d01e75e465593984e46120b2d14"
+      }
+    ]
+  },
+  {
+    "appId": "416048305",
+    "schemes": [
+      {
+        "scheme": "mtxx.open://",
+        "shortcut": "https://www.icloud.com/shortcuts/d4176f409a31465d9a18b9921c0924ea"
+      }
+    ]
+  },
+  {
+    "appId": "382201985",
+    "schemes": [
+      {
+        "scheme": "baiduboxapp://",
+        "shortcut": "https://www.icloud.com/shortcuts/1142688d3dd14c54824e5ab12a90f962"
+      }
+    ]
+  },
+  {
+    "appId": "547166701",
+    "schemes": [
+      {
+        "scheme": "baiduyun://",
+        "shortcut": "https://www.icloud.com/shortcuts/6820969dfe144ba78e3dc5a1cba2ee3e"
+      }
+    ]
+  },
+  {
+    "appId": "1165227346",
+    "schemes": [
+      {
+        "scheme": "hellobike://",
+        "shortcut": "https://www.icloud.com/shortcuts/91d61fad24d04749ab2ea8aae7de33ba"
+      }
+    ]
+  },
+  {
+    "appId": "518213356",
+    "schemes": [
+      {
+        "scheme": "smzdm://",
+        "shortcut": "https://www.icloud.com/shortcuts/c3379bf9d5984001beeeb71e6409af4a"
+      }
+    ]
+  },
+  {
+    "appId": "1401729613",
+    "schemes": [
+      {
+        "scheme": "feishu://",
+        "shortcut": "https://www.icloud.com/shortcuts/df396c0f0ea64f078ba7f3db1b6325e7"
+      }
+    ]
+  },
+  {
+    "appId": "424598114",
+    "schemes": [
+      {
+        "scheme": "suning://",
+        "shortcut": "https://www.icloud.com/shortcuts/13a3a9db54544f4793c77d7a42231440"
+      }
+    ]
+  },
+  {
+    "appId": "1065178761",
+    "schemes": [
+      {
+        "scheme": "yanxuan://",
+        "shortcut": "https://www.icloud.com/shortcuts/667f44e3a8ff45cdba1cf419b64c5894"
+      }
+    ]
+  },
+  {
+    "appId": "1340376323",
+    "schemes": [
+      {
+        "scheme": "taobaolite://",
+        "shortcut": "https://www.icloud.com/shortcuts/d6371d2f6f69432c996c7aeb595fc2ba"
+      }
+    ]
+  },
+  {
+    "appId": "452176796",
+    "schemes": [
+      {
+        "scheme": "mogujie://",
+        "shortcut": "https://www.icloud.com/shortcuts/b55c9681b7f64c719f936c501d5f22e7"
+      }
+    ]
+  },
+  {
+    "appId": "1002355194",
+    "schemes": [
+      {
+        "scheme": "zhuanzhuan://",
+        "shortcut": "https://www.icloud.com/shortcuts/04f5510dbe794e7abb545d3c0f5c4a4d"
+      }
+    ]
+  },
+  {
+    "appId": "379395415",
+    "schemes": [
+      {
+        "scheme": "ctrip://",
+        "shortcut": "https://www.icloud.com/shortcuts/54f83ff51b5f479d8ce15ffb26c3311a"
+      }
+    ]
+  },
+  {
+    "appId": "395096736",
+    "schemes": [
+      {
+        "scheme": "QunarAlipay://",
+        "shortcut": "https://www.icloud.com/shortcuts/a6128fe2e9ad4cb88b93fe3da62dd77f"
+      }
+    ]
+  },
+  {
+    "appId": "453691481",
+    "schemes": [
+      {
+        "scheme": "taobaotravel://",
+        "shortcut": "https://www.icloud.com/shortcuts/21c07ece787247b68f725f163f8cd61c"
       }
     ]
   }
