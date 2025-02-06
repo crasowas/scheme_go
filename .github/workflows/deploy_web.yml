@@ -23,6 +23,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: 3.27.3
 
       - name: 📦 Install Dependencies
         run: flutter pub get
@@ -31,7 +32,7 @@ jobs:
         run: dart ./scripts/generate_apps_json.dart
 
       - name: 🏗 Build Flutter Web
-        run: flutter build web --release
+        run: flutter build web --release --web-renderer html
 
       - name: 📄 Copy CNAME file
         run: cp CNAME build/web/CNAME

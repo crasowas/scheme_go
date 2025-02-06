@@ -23,7 +23,8 @@ class _HomePageState extends State<HomePage> {
   static const String title = 'Scheme Go!';
   static const String githubLogoUrl =
       'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
-  static const String githubProjectUrl = 'https://github.com/crasowas/scheme_go';
+  static const String githubProjectUrl =
+      'https://github.com/crasowas/scheme_go';
   final TextEditingController _searchController = TextEditingController();
   List<AppModel> _apps = [];
   List<AppModel> _filteredApps = [];
@@ -85,7 +86,8 @@ class _HomePageState extends State<HomePage> {
               cursorColor: Colors.green,
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
-                hintText: '输入名称搜索APP...',
+                hintText: '输入APP名称搜索...',
+                hintStyle: TextStyle(color: Colors.grey),
                 filled: true,
                 fillColor: Colors.white,
                 contentPadding: EdgeInsets.symmetric(vertical: 4.0),
@@ -133,8 +135,11 @@ class _HomePageState extends State<HomePage> {
           child: Center(
             child: Text(
               title,
-              style:
-                  TextStyle(color: Colors.green, fontStyle: FontStyle.italic),
+              style: TextStyle(
+                fontSize: 24,
+                color: Colors.green,
+                fontStyle: FontStyle.italic,
+              ),
             ),
           ),
         ),
@@ -166,12 +171,12 @@ class _HomePageState extends State<HomePage> {
             child: LayoutBuilder(
               builder: (context, constraints) {
                 const double minCardWidth = 300;
-                int crossAxisCount =
+                final int crossAxisCount =
                     (constraints.maxWidth / minCardWidth).floor().clamp(1, 6);
                 return SingleChildScrollView(
                   child: StaggeredGrid.count(
                     crossAxisCount: crossAxisCount,
-                    mainAxisSpacing: 8,
+                    mainAxisSpacing: 4,
                     crossAxisSpacing: 8,
                     children: _filteredApps.map((app) {
                       return AppCardWidget(app: app);

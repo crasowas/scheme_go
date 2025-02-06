@@ -60,12 +60,12 @@ class AppCardWidget extends StatelessWidget {
                   iconAlignment: IconAlignment.end,
                   icon: Icon(Icons.download, color: Colors.white, size: 16),
                   label: Text(
-                    'APP 图标',
+                    'APP图标',
                     style: TextStyle(fontSize: 12),
                   ),
                   style: TextButton.styleFrom(
                     padding: EdgeInsets.symmetric(vertical: 0, horizontal: 6),
-                    minimumSize: Size(0, 40),
+                    minimumSize: Size(0, 38),
                     backgroundColor: Colors.green,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(6),
@@ -77,7 +77,7 @@ class AppCardWidget extends StatelessWidget {
                 )
               ],
             ),
-            SizedBox(height: 16),
+            SizedBox(height: 12),
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: app.schemes
@@ -95,47 +95,7 @@ class AppCardWidget extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
         Expanded(
-          flex: 2,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: scheme.desc.isEmpty
-                ? <Widget>[
-                    GestureDetector(
-                      onTap: () {
-                        UrlLauncherUtil.openUrl(scheme.scheme);
-                      },
-                      child: Text(
-                        scheme.scheme,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                    )
-                  ]
-                : <Widget>[
-                    GestureDetector(
-                      onTap: () {
-                        UrlLauncherUtil.openUrl(scheme.scheme);
-                      },
-                      child: Text(
-                        scheme.scheme,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
-                    SizedBox(height: 2),
-                    Text(
-                      scheme.desc,
-                      style: TextStyle(
-                        fontSize: 12,
-                        color: Colors.black54,
-                      ),
-                    ),
-                  ],
-          ),
+          child: _buildSchemeDetail(scheme),
         ),
         SizedBox(width: 16),
         if (scheme.shortcut.isNotEmpty)
@@ -148,7 +108,7 @@ class AppCardWidget extends StatelessWidget {
             ),
             style: TextButton.styleFrom(
               padding: EdgeInsets.symmetric(vertical: 0, horizontal: 4),
-              minimumSize: Size(0, 38),
+              minimumSize: Size(0, 32),
               backgroundColor: Colors.green.shade400,
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(6),
@@ -159,6 +119,47 @@ class AppCardWidget extends StatelessWidget {
             },
           )
       ],
+    );
+  }
+
+  Widget _buildSchemeDetail(SchemeModel scheme) {
+    final List<Widget> children = <Widget>[];
+    children.add(
+      GestureDetector(
+        onTap: () {
+          UrlLauncherUtil.openUrl(scheme.scheme);
+        },
+        child: RichText(
+          text: TextSpan(
+            style: TextStyle(
+              fontSize: 16,
+              fontWeight: FontWeight.w500,
+              color: Colors.black87,
+            ),
+            children: <TextSpan>[
+              TextSpan(text: scheme.scheme.split(':')[0]),
+              TextSpan(text: ':', style: TextStyle(letterSpacing: 2.5)),
+              TextSpan(text: scheme.scheme.split(':')[1]),
+            ],
+          ),
+        ),
+      ),
+    );
+    if (scheme.desc.isNotEmpty) {
+      children.add(SizedBox(height: 2));
+      children.add(
+        Text(
+          scheme.desc,
+          style: TextStyle(
+            fontSize: 14,
+            color: Colors.black54,
+          ),
+        ),
+      );
+    }
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: children,
     );
   }
 }
