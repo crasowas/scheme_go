@@ -33,7 +33,8 @@ Future<void> main() async {
       final json = jsonDecode(response.body);
       if (json['resultCount'] > 0) {
         final appData = json['results'][0];
-        final String appName = appData['trackName'].split('-')[0].trim();
+        final String appName =
+            appData['trackName'].split(RegExp(r'[-–—（「]'))[0].trim();
         app['appName'] = appName;
         app['artworkUrl100'] = appData['artworkUrl100'];
         app['artworkUrl512'] = appData['artworkUrl512'];

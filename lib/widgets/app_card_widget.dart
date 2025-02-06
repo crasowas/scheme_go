@@ -132,7 +132,7 @@ class AppCardWidget extends StatelessWidget {
         child: RichText(
           text: TextSpan(
             style: TextStyle(
-              fontSize: 16,
+              fontSize: 18,
               fontWeight: FontWeight.w500,
               color: Colors.black87,
             ),
