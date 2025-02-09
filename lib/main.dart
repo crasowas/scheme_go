@@ -9,11 +9,11 @@ import 'package:flutter/material.dart';
 import 'pages/home_page.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(MainApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {

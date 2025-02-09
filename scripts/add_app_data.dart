@@ -8,87 +8,100 @@ import 'dart:convert';
 import 'dart:io';
 
 import 'package:http/http.dart' as http;
+import 'package:scheme_go/utils/console_util.dart';
 
-const String appDataPath = 'apps_data.json';
-const String apiUrl = 'https://itunes.apple.com/search?term=';
+import 'generate_apps_json.dart' show sourceFilePath;
+
+const String _iTunesSearchApi = 'https://itunes.apple.com/search';
 
 Future<void> main(List<String> arguments) async {
+  ConsoleUtil.writeln('');
+
   if (arguments.isEmpty) {
-    print('❌ Please enter the name of the app to search.');
-    print('Example: dart run ./scripts/add_app_data.dart "APP名称" cn');
+    ConsoleUtil.info(
+        'Usage: dart run ./scripts/add_app_data.dart <app_name> [country]');
+    ConsoleUtil.info(
+        'Example: dart run ./scripts/add_app_data.dart "Google" cn');
     exit(1); // Terminate the script with an error code
   }
 
-  final String appName = arguments[0];
+  final String name = arguments[0];
   final String country = arguments.length > 1 ? arguments[1] : 'cn';
 
-  final File appDataFile = File(appDataPath);
-  if (!appDataFile.existsSync()) {
-    print('❌ Error: $appDataPath not found.');
+  final File sourceFile = File(sourceFilePath);
+  if (!sourceFile.existsSync()) {
+    ConsoleUtil.error('App data file not found: $sourceFilePath');
     exit(1); // Terminate the script with an error code
   }
 
-  List<dynamic> apps = jsonDecode(appDataFile.readAsStringSync());
+  final List<dynamic> apps = jsonDecode(sourceFile.readAsStringSync());
 
-  print('\n🔍 Searching for "$appName" ($country)...');
+  ConsoleUtil.info('Searching for $name (country: $country)...');
 
-  final response = await http.get(
-      Uri.parse('$apiUrl$appName&country=$country&entity=software&limit=5'));
+  try {
+    final http.Response response = await http.get(Uri.parse(
+        '$_iTunesSearchApi?term=$name&country=$country&entity=software&limit=5'));
 
-  if (response.statusCode == 200) {
-    final json = jsonDecode(response.body);
-    if (json['resultCount'] > 0) {
-      final appsData = json['results'];
-      for (var i = 0; i < appsData.length; ++i) {
-        final data = appsData[i];
-        print(
-            '${i + 1}. ${data['trackName']} - id: ${data['trackId']} - bundleId: ${data['bundleId']}');
-      }
+    if (response.statusCode == 200) {
+      final Map<String, dynamic> jsonResponse = jsonDecode(response.body);
+      if (jsonResponse['resultCount'] > 0) {
+        final List<dynamic> searchResults = jsonResponse['results'];
 
-      print('\nEnter the number of the app you want to choose: ');
-      final String? input = stdin.readLineSync();
+        for (var i = 0; i < searchResults.length; ++i) {
+          final Map<String, dynamic> result = searchResults[i];
+          ConsoleUtil.info(
+              '${i + 1}. ${result['trackName']} | id: ${result['trackId']} | bundle id: ${result['bundleId']}');
+        }
 
-      if (input == null || input.isEmpty) {
-        print('❌ Invalid selection.');
-        return;
-      }
+        final String? userInput = ConsoleUtil.readLineSync(
+            prompt: '\nEnter the number of the app you want to add: ');
+        ConsoleUtil.writeln('');
 
-      final int? index = int.tryParse(input);
-      if (index == null || index < 1 || index > appsData.length) {
-        print(
-            '❌ Please enter a valid number between 1 and ${appsData.length}.');
-        return;
-      }
+        final int? selectedIndex =
+            userInput != null ? int.tryParse(userInput) : null;
+        if (selectedIndex == null ||
+            selectedIndex < 1 ||
+            selectedIndex > searchResults.length) {
+          ConsoleUtil.error(
+              'Please enter a valid number between 1 and ${searchResults.length}.');
+          return;
+        }
 
-      final appData = appsData[index - 1];
-      final String appId = appData['trackId'].toString();
-      final String appName = appData['trackName'];
-      final bool isExit = apps
-          .where((e) => e['appId'] == appId)
-          .toList(growable: false)
-          .isNotEmpty;
+        final Map<String, dynamic> selectedApp =
+            searchResults[selectedIndex - 1];
+        final String selectedId = selectedApp['trackId'].toString();
+        final String selectedName = selectedApp['trackName'];
 
-      if (isExit) {
-        print('⚠️ $appName ($appId) - Already exists.');
+        final bool appExists = apps.any((app) => app['id'] == selectedId);
+        if (appExists) {
+          ConsoleUtil.warn('$selectedName (id: $selectedId) already exists.');
+        } else {
+          apps.add({
+            'id': selectedId,
+            if (country != 'cn') 'country': country,
+            'schemes': [
+              {
+                'scheme': '://',
+                'shortcut': 'https://www.icloud.com/shortcuts/',
+              }
+            ]
+          });
+
+          sourceFile
+              .writeAsStringSync(JsonEncoder.withIndent('  ').convert(apps));
+          ConsoleUtil.success(
+              'Successfully added $selectedName (id: $selectedId).');
+        }
       } else {
-        apps.add({
-          'appId': appId,
-          'schemes': [
-            {
-              'scheme': '://',
-              'shortcut': 'https://www.icloud.com/shortcuts/',
-            }
-          ]
-        });
-        appDataFile
-            .writeAsStringSync(JsonEncoder.withIndent('  ').convert(apps));
-        print('✅ Successfully added $appName ($appId).');
+        ConsoleUtil.warn(
+            'No matching app found for $name (country: $country).');
       }
     } else {
-      print('⚠️ $appName - Not found.');
+      ConsoleUtil.error(
+          'Request failed for $name (country: $country), HTTP Status Code: ${response.statusCode}');
     }
-  } else {
-    print(
-        '❌ $appName - Request failed with status code: ${response.statusCode}');
+  } catch (e) {
+    ConsoleUtil.error(
+        'Network error while searching data for name: $name (country: $country) - $e');
   }
 }

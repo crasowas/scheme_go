@@ -4,7 +4,7 @@
 // that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
-import 'dart:html' as html;
+import 'dart:html' as html show window;
 
 class UrlLauncherUtil {
   static void openUrl(String url, {bool newTab = false}) {

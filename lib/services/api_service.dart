@@ -8,6 +8,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 import '../models/app_model.dart';
+import '../utils/console_util.dart';
 
 class ApiService {
   static const String apiUrl = '/apps.json';
@@ -23,10 +24,10 @@ class ApiService {
             .map((data) => AppModel.fromJson(data))
             .toList(growable: false);
       } else {
-        throw Exception('Failed to load apps.json');
+        throw Exception('Failed to load apps.json.');
       }
     } catch (e) {
-      print('API Error: $e');
+      ConsoleUtil.error('API Error: $e');
       return [];
     }
   }

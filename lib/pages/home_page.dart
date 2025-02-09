@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
   void filterApps() {
     setState(() {
       _filteredApps = _apps
-          .where((app) => app.appName
+          .where((app) => app.name
               .toLowerCase()
               .contains(_searchController.text.toLowerCase()))
           .toList(growable: false);
@@ -86,7 +86,7 @@ class _HomePageState extends State<HomePage> {
               cursorColor: Colors.green,
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
-                hintText: '输入APP名称搜索...',
+                hintText: '输入App名称搜索...',
                 hintStyle: TextStyle(color: Colors.grey),
                 filled: true,
                 fillColor: Colors.white,

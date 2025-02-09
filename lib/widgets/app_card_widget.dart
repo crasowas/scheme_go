@@ -46,21 +46,26 @@ class AppCardWidget extends StatelessWidget {
                 ),
                 SizedBox(width: 16),
                 Expanded(
-                  child: Text(
-                    app.appName,
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.black87,
+                  child: GestureDetector(
+                    onTap: () {
+                      UrlLauncherUtil.openUrl('itms-apps://itunes.apple.com/app/${app.id}');
+                    },
+                    child: Text(
+                      app.name,
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w600,
+                        color: Colors.black87,
+                      ),
+                      overflow: TextOverflow.ellipsis,
                     ),
-                    overflow: TextOverflow.ellipsis,
                   ),
                 ),
                 TextButton.icon(
                   iconAlignment: IconAlignment.end,
                   icon: Icon(Icons.download, color: Colors.white, size: 16),
                   label: Text(
-                    'APP图标',
+                    'App图标',
                     style: TextStyle(fontSize: 12),
                   ),
                   style: TextButton.styleFrom(
@@ -72,7 +77,7 @@ class AppCardWidget extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    _downloadImage(app.artworkUrl512, '${app.appName}.png');
+                    _downloadImage(app.artworkUrl512, '${app.name}.png');
                   },
                 )
               ],

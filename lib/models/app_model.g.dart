@@ -7,8 +7,8 @@ part of 'app_model.dart';
 // **************************************************************************
 
 AppModel _$AppModelFromJson(Map<String, dynamic> json) => AppModel(
-      json['appId'] as String,
-      json['appName'] as String? ?? '',
+      json['id'] as String,
+      json['name'] as String? ?? '',
       json['artworkUrl100'] as String? ?? '',
       json['artworkUrl512'] as String? ?? '',
       (json['schemes'] as List<dynamic>?)
@@ -18,8 +18,8 @@ AppModel _$AppModelFromJson(Map<String, dynamic> json) => AppModel(
     );
 
 Map<String, dynamic> _$AppModelToJson(AppModel instance) => <String, dynamic>{
-      'appId': instance.appId,
-      'appName': instance.appName,
+      'id': instance.id,
+      'name': instance.name,
       'artworkUrl100': instance.artworkUrl100,
       'artworkUrl512': instance.artworkUrl512,
       'schemes': instance.schemes,

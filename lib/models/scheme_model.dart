@@ -19,7 +19,8 @@ class SchemeModel {
 
   SchemeModel(this.scheme, this.shortcut, this.desc);
 
-  factory SchemeModel.fromJson(Map<String, dynamic> json) => _$SchemeModelFromJson(json);
+  factory SchemeModel.fromJson(Map<String, dynamic> json) =>
+      _$SchemeModelFromJson(json);
 
   Map<String, dynamic> toJson() => _$SchemeModelToJson(this);
 }

@@ -13,9 +13,9 @@ part 'app_model.g.dart';
 /// AppModel
 @JsonSerializable()
 class AppModel {
-  String appId;
+  String id;
   @JsonKey(defaultValue: '')
-  String appName;
+  String name;
   @JsonKey(defaultValue: '')
   String artworkUrl100;
   @JsonKey(defaultValue: '')
@@ -23,8 +23,8 @@ class AppModel {
   @JsonKey(defaultValue: [])
   List<SchemeModel> schemes;
 
-  AppModel(this.appId, this.appName, this.artworkUrl100, this.artworkUrl512,
-      this.schemes);
+  AppModel(
+      this.id, this.name, this.artworkUrl100, this.artworkUrl512, this.schemes);
 
   factory AppModel.fromJson(Map<String, dynamic> json) =>
       _$AppModelFromJson(json);
