@@ -1,6 +1,6 @@
-# scheme_go
+# Scheme Go
 
-一个简单的Web项目，收集了一些网上公开的URL Scheme以及分享的快捷指令用于测试APP唤起。
+一个简单的Web项目，收集了一些网上公开的URL Scheme以及分享的快捷指令用于测试App唤起。
 
 在线页面：[Scheme Go](https://sg.crasowas.dev)
 
@@ -14,9 +14,11 @@
 scheme://
 ```
 
-是不是感觉这东西你天天见，很像`https://`形式，那还真有一点点区别，`https://`这种是标准的Scheme，而**URL Scheme本质指的是自定义Scheme**。
+是不是感觉这东西你天天见，很像`https://`形式，那还真有一点点区别，`https://`这种是标准的Scheme，而**URL
+Scheme本质指的是自定义Scheme**。
 
-假如你现在打算开发一个iOS应用叫`ABC`，然后想支持其他应用或应用内部像URL一样跳转解析，这时你就可以自定义属于`ABC`应用的Scheme，简单点就叫`abc`，需要在`Info.plist`文件中注册URL Scheme：
+假如你现在打算开发一个iOS应用叫`ABC`，然后想支持其他应用或应用内部像URL一样跳转解析，这时你就可以自定义属于
+`ABC`应用的Scheme，简单点就叫`abc`，需要在`Info.plist`文件中注册URL Scheme：
 
 ```text
 <key>CFBundleURLTypes</key>
@@ -38,31 +40,12 @@ scheme://
 
 **但是话又说回来，这广告还不是想加就加，所以只能说有一定的可行性。**
 
-## 完善APP数据
+## 完善App数据
 
-欢迎大家一起完善收录的APP数据👏，以下是常见的两种贡献方式：
+提交入口：[Submit APP Data](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)。
 
-1. **提个[issue](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)（推荐）。**
+关键要填的就两个数据，一是App名称，二是URL Scheme。如果不确定URL Scheme也可以提交，只是根据App名称不一定能找到。
 
-2. **在项目下的[apps_data.json](https://github.com/crasowas/scheme_go/blob/main/apps_data.json)文件中追加新的APP数据，然后提PR。** APP数据格式如下：
+## 贡献指南
 
-```json
-{
-  "appId": "应用id（必填）",
-  "schemes": [
-    {
-      "scheme": "URL Scheme（必填）",
-      "shortcut": "快捷指令分享链接（可选）",
-      "desc": "额外描述，用于区分多个Scheme（可选）"
-    }
-  ]
-}
-```
-
-如果有开发环境，建议修改后在项目根目录运行以下命令：
-
-```shell
-dart run ./scripts/generate_apps_json.dart
-```
-
-检查自动生成的`web/apps.json`文件中，新增的APP数据是否正确。
+欢迎为该项目做出贡献，详情请看：[CONTRIBUTING.md](https://github.com/crasowas/scheme_go/blob/main/CONTRIBUTING.md)。
