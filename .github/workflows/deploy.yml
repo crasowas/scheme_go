@@ -8,22 +8,24 @@ on:
     tags:
       - 'v[0-9]+.[0-9]+.[0-9]+*'
 
-permissions:
-  contents: write
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      # Grant write permissions to push build artifacts to gh-pages branch
+      contents: write
 
     steps:
       - name: 📥 Checkout Repository
         uses: actions/checkout@v4
 
+      # Lock the Flutter version to ensure compatibility with HTML renderer
+      # Future updates will switch to CanvasKit renderer, allowing version flexibility
       - name: 🛠 Setup Flutter (includes Dart)
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version: 3.27.3
+          flutter-version: 3.27.4
 
       - name: 📦 Install Dependencies
         run: flutter pub get
@@ -31,6 +33,7 @@ jobs:
       - name: 📄 Generate apps.json
         run: dart ./scripts/generate_apps_json.dart
 
+      # Build the Flutter web app using the HTML renderer (temporary choice)
       - name: 🏗 Build Flutter Web
         run: flutter build web --release --web-renderer html
 
