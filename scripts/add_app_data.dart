@@ -44,11 +44,12 @@ Future<void> main(List<String> arguments) async {
 
     if (response.statusCode == 200) {
       final Map<String, dynamic> jsonResponse = jsonDecode(response.body);
-      if (jsonResponse['resultCount'] > 0) {
-        final List<dynamic> searchResults = jsonResponse['results'];
 
-        for (var i = 0; i < searchResults.length; ++i) {
-          final Map<String, dynamic> result = searchResults[i];
+      if (jsonResponse['resultCount'] > 0) {
+        final List<dynamic> results = jsonResponse['results'];
+
+        for (var i = 0; i < results.length; ++i) {
+          final Map<String, dynamic> result = results[i];
           ConsoleUtil.info(
               '${i + 1}. ${result['trackName']} | id: ${result['trackId']} | bundle id: ${result['bundleId']}');
         }
@@ -61,14 +62,13 @@ Future<void> main(List<String> arguments) async {
             userInput != null ? int.tryParse(userInput) : null;
         if (selectedIndex == null ||
             selectedIndex < 1 ||
-            selectedIndex > searchResults.length) {
+            selectedIndex > results.length) {
           ConsoleUtil.error(
-              'Please enter a valid number between 1 and ${searchResults.length}.');
+              'Please enter a valid number between 1 and ${results.length}.');
           return;
         }
 
-        final Map<String, dynamic> selectedApp =
-            searchResults[selectedIndex - 1];
+        final Map<String, dynamic> selectedApp = results[selectedIndex - 1];
         final String selectedId = selectedApp['trackId'].toString();
         final String selectedName = selectedApp['trackName'];
 

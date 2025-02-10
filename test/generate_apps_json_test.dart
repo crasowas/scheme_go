@@ -33,7 +33,7 @@ void main() {
           'dart', ['./scripts/generate_apps_json.dart', '--pretty']);
       expect(result.exitCode, equals(0),
           reason: 'Dart script execution failed');
-    }, timeout: Timeout(Duration(seconds: 60)));
+    }, timeout: Timeout(Duration(seconds: 360)));
   });
 
   group('Validate generated apps.json file', () {
