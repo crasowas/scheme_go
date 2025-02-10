@@ -22,6 +22,8 @@
 
 如果需要将唤起应用的快捷指令添加到桌面，可以先点击【**App图标**】下载应用图标，然后添加快捷指令，最后添加到主屏幕时通过【**选取文件**】选取下载的应用图标用于自定义图标。
 
+更多详情请看：[简化用于唤起App快捷指令的添加流程](https://api.xiaoheihe.cn/v3/bbs/app/api/web/share?link_id=fe256fd640b3)
+
 ## 跳过开屏广告
 
 本项目源于这篇文章：[0.5 秒直抵主页！苹果产品告别开屏广告，从此追剧看文无打扰](https://api.xiaoheihe.cn/v3/bbs/app/api/web/share?link_id=d9bf6fc9fbee)。
@@ -58,7 +60,7 @@ scheme://
 
 ## 完善App数据
 
-提交入口：[Submit APP Data](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)。
+提交入口：[Submit APP Data](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)
 
 关键要填的就两个数据，一是App名称，二是URL Scheme。如果不确定URL Scheme也可以提交，只是根据App名称不一定能找到。
 
