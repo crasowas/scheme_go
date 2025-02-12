@@ -4,6 +4,7 @@
 // that can be found in the LICENSE file or at
 // https://opensource.org/licenses/MIT.
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
@@ -25,6 +26,8 @@ class _HomePageState extends State<HomePage> {
       'https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png';
   static const String githubProjectUrl =
       'https://github.com/crasowas/scheme_go';
+  static const String submitAppDataUrl =
+      'https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md';
   final TextEditingController _searchController = TextEditingController();
   List<AppModel> _apps = [];
   List<AppModel> _filteredApps = [];
@@ -174,13 +177,41 @@ class _HomePageState extends State<HomePage> {
                 final int crossAxisCount =
                     (constraints.maxWidth / minCardWidth).floor().clamp(1, 6);
                 return SingleChildScrollView(
-                  child: StaggeredGrid.count(
-                    crossAxisCount: crossAxisCount,
-                    mainAxisSpacing: 4,
-                    crossAxisSpacing: 8,
-                    children: _filteredApps.map((app) {
-                      return AppCardWidget(app: app);
-                    }).toList(growable: false),
+                  child: Column(
+                    children: <Widget>[
+                      StaggeredGrid.count(
+                        crossAxisCount: crossAxisCount,
+                        mainAxisSpacing: 4,
+                        crossAxisSpacing: 8,
+                        children: _filteredApps.map((app) {
+                          return AppCardWidget(app: app);
+                        }).toList(growable: false),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.all(12),
+                        child: RichText(
+                          text: TextSpan(
+                            text: '没找到想要的App？',
+                            style: TextStyle(
+                              fontSize: 16,
+                              fontWeight: FontWeight.normal,
+                              color: Colors.grey,
+                            ),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: '去提交',
+                                style: TextStyle(color: Colors.green),
+                                recognizer: TapGestureRecognizer()
+                                  ..onTap = () {
+                                    UrlLauncherUtil.openUrl(submitAppDataUrl,
+                                        newTab: true);
+                                  },
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 );
               },
