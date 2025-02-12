@@ -48,7 +48,8 @@ class AppCardWidget extends StatelessWidget {
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      UrlLauncherUtil.openUrl('itms-apps://itunes.apple.com/app/${app.id}');
+                      UrlLauncherUtil.openUrl(
+                          'itms-apps://itunes.apple.com/app/${app.id}');
                     },
                     child: Text(
                       app.name,
