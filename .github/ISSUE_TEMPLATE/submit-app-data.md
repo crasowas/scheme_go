@@ -1,16 +1,13 @@
 ---
 name: Submit App Data
 about: Submit App Name and URL Schemes with optional shortcuts and descriptions.
-title: "[App Data]"
+title: "[App Name]"
 labels: ["app data"]
 assignees: crasowas
 
 ---
 
 ## App Data Submission
-
-**App Name:**  
-(Please enter the App name)
 
 **Country Code (Optional):**  
 (If the country code is not "cn", please enter it)
