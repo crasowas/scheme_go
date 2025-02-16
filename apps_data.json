@@ -624,5 +624,14 @@
         "shortcut": "https://www.icloud.com/shortcuts/21c07ece787247b68f725f163f8cd61c"
       }
     ]
+  },
+  {
+    "id": "430814532",
+    "schemes": [
+      {
+        "scheme": "ehi://",
+        "shortcut": "https://www.icloud.com/shortcuts/be4da9c26b2e4aac81d58c201e121d07"
+      }
+    ]
   }
 ]
