@@ -89,7 +89,7 @@ class _HomePageState extends State<HomePage> {
               cursorColor: Colors.green,
               textInputAction: TextInputAction.search,
               decoration: InputDecoration(
-                hintText: '输入App名称搜索...',
+                hintText: '请输入App名称（已收集${_apps.length}个）...',
                 hintStyle: TextStyle(color: Colors.grey),
                 filled: true,
                 fillColor: Colors.white,
@@ -148,18 +148,33 @@ class _HomePageState extends State<HomePage> {
         ),
         Align(
           alignment: Alignment.centerRight,
-          child: IconButton(
-            icon: Image.network(
-              githubLogoUrl,
-              width: 36,
-              height: 36,
-            ),
-            splashColor: Colors.transparent,
-            highlightColor: Colors.transparent,
-            hoverColor: Colors.transparent,
-            onPressed: () {
+          child: GestureDetector(
+            onTap: () {
               UrlLauncherUtil.openUrl(githubProjectUrl, newTab: true);
             },
+            child: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: <Widget>[
+                Image.network(
+                  githubLogoUrl,
+                  width: 36,
+                  height: 36,
+                ),
+                Container(
+                  width: 50,
+                  margin: EdgeInsets.only(left: 2),
+                  child: Text(
+                    '给个⭐支持一下吧！',
+                    style: TextStyle(
+                      fontSize: 10,
+                      fontWeight: FontWeight.normal,
+                      color: Colors.black54,
+                    ),
+                    maxLines: 2,
+                  ),
+                ),
+              ],
+            ),
           ),
         )
       ],
