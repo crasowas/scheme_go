@@ -66,4 +66,4 @@ scheme://
 
 ## 贡献指南
 
-欢迎为该项目做出贡献，详情请看：[CONTRIBUTING.md](https://github.com/crasowas/scheme_go/blob/main/CONTRIBUTING.md)。
+欢迎为该项目做出贡献，详情请看：[CONTRIBUTING.md](./CONTRIBUTING.md)。
