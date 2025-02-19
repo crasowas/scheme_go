@@ -52,7 +52,8 @@ class _HomePageState extends State<HomePage> {
 
   // 加载app.json数据
   void loadApps() async {
-    List<AppModel> fetchedApps = await ApiService.fetchApps();
+    List<AppModel> fetchedApps =
+        (await ApiService.fetchApps()).reversed.toList(growable: false);
     setState(() {
       _apps = fetchedApps;
       _filteredApps = fetchedApps;
