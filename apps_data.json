@@ -170,8 +170,7 @@
       },
       {
         "scheme": "openjd://",
-        "shortcut": "https://www.icloud.com/shortcuts/383eee6e883a48cf87edc7f4d0227efe",
-        "desc": "和 openapp.jdmobile:// 效果一样"
+        "shortcut": "https://www.icloud.com/shortcuts/383eee6e883a48cf87edc7f4d0227efe"
       }
     ]
   },
@@ -631,6 +630,19 @@
       {
         "scheme": "ehi://",
         "shortcut": "https://www.icloud.com/shortcuts/be4da9c26b2e4aac81d58c201e121d07"
+      }
+    ]
+  },
+  {
+    "id": "651323845",
+    "schemes": [
+      {
+        "scheme": "suanya://",
+        "shortcut": "https://www.icloud.com/shortcuts/a698bc6c50c747c78fc890ae18b0cc10"
+      },
+      {
+        "scheme": "sy://",
+        "shortcut": "https://www.icloud.com/shortcuts/af567668a0b7402d83171cbd11abb238"
       }
     ]
   }
