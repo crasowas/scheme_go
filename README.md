@@ -58,11 +58,88 @@ scheme://
 
 **但是话又说回来，这广告还不是想加就加，所以只能说有一定的可行性。**
 
-## 完善App数据
+## App数据
 
-提交入口：[Submit App Data](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)。
+欢迎大家一起完善App数据，提交入口：[Submit App Data](https://github.com/crasowas/scheme_go/issues/new?template=submit-app-data.md)。
 
 关键要填的就两个数据，一是App名称，二是URL Scheme。如果不确定URL Scheme也可以提交，只是根据App名称不一定能找到。
+
+### URL Schemes
+
+| App Name   | URL Scheme                           |
+|------------|--------------------------------------|
+| 抖音         | `snssdk1128://`                      |
+| 美团外卖       | `meituanwaimai://`                   |
+| 网易云音乐      | `orpheuswidget://`                   |
+| 微博         | `sinaweibo://`                       |
+| 百度贴吧       | `com.baidu.tieba://`                 |
+| 闲鱼         | `fleamarket://`                      |
+| 滴滴出行       | `diditaxi://`                        |
+| 百词斩        | `baicizhanios://`                    |
+| 今日头条       | `snssdk141://`                       |
+| 百度翻译       | `baidufanyi://`                      |
+| 支付宝        | `alipays://`                         |
+| 起点读书       | `qidian://`                          |
+| 虎牙直播       | `yykiwi://`                          |
+| 运动世界校园     | `physicalfitness://`                 |
+| 倒班助手       | `shiftassistant://`                  |
+| 扫描全能王      | `camscanner://`                      |
+| 快手         | `kwai://`                            |
+| 小红书        | `xhsdiscover://`                     |
+| 京东         | `openapp.jdmobile://`<br>`openjd://` |
+| QQ阅读       | `uniteqqreader://nativepage/`        |
+| 最右         | `zuiyou://`                          |
+| 中国移动       | `cn.10086.app://`                    |
+| 铁路12306    | `cn.12306://`                        |
+| 美团         | `imeituan://`                        |
+| 斗鱼         | `douyutv://`                         |
+| 哔哩哔哩       | `bilibili://`                        |
+| 腾讯视频       | `tenvideo://`                        |
+| 优酷视频       | `youku://`                           |
+| 爱奇艺        | `iqiyi://`                           |
+| 大众点评       | `dianping://`                        |
+| 淘宝         | `taobao://`                          |
+| 饿了么        | `eleme://`                           |
+| 58同城       | `wbmain://`                          |
+| 贝壳找房       | `beike://`                           |
+| 微信         | `wechat://`                          |
+| QQ         | `mqq://`                             |
+| MOMO陌陌     | `momochat://`                        |
+| 脉脉         | `maimai://`                          |
+| 百度地图       | `baidumap://`                        |
+| 高德地图       | `iosamap://`                         |
+| 拼多多        | `pinduoduo://`                       |
+| 天猫         | `tmall://`                           |
+| 墨迹天气       | `rm434209233MojiWeather://`          |
+| 唯品会        | `vipshop://`                         |
+| QQ音乐       | `qqmusic://`                         |
+| 酷狗音乐       | `kugouURL://`                        |
+| 喜马拉雅       | `xmly://`                            |
+| 蜻蜓FM       | `qtfmp://`                           |
+| WPS Office | `KingsoftOfficeApp://`               |
+| 腾讯会议       | `meeting://`                         |
+| 钉钉         | `dingtalk://`                        |
+| 作业帮        | `zybang://`                          |
+| 豆瓣         | `douban://`                          |
+| 知乎         | `zhihu://`                           |
+| 剪映         | `jianying://`                        |
+| 美图秀秀       | `mtxx.open://`                       |
+| 百度         | `baiduboxapp://`                     |
+| 百度网盘       | `baiduyun://`                        |
+| 哈啰         | `hellobike://`                       |
+| 什么值得买      | `smzdm://`                           |
+| 飞书         | `feishu://`                          |
+| 苏宁易购       | `suning://`                          |
+| 网易严选       | `yanxuan://`                         |
+| 淘宝特价版      | `taobaolite://`                      |
+| 蘑菇街        | `mogujie://`                         |
+| 转转         | `zhuanzhuan://`                      |
+| 携程旅行       | `ctrip://`                           |
+| 去哪儿旅行      | `QunarAlipay://`                     |
+| 飞猪旅行       | `taobaotravel://`                    |
+| 一嗨租车       | `ehi://`                             |
+| 智行火车票      | `suanya://`<br>`sy://`               |
+| 掌上英雄联盟     | `mlolapp://`                         |
 
 ## 贡献指南
 
