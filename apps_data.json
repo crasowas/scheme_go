@@ -75,8 +75,8 @@
     "id": "529092160",
     "schemes": [
       {
-        "scheme": "snssdk141:// ",
-        "shortcut": "https://www.icloud.com/shortcuts/94cb97db85654eff926d195601d36e01"
+        "scheme": "snssdk141://",
+        "shortcut": "https://www.icloud.com/shortcuts/53035634334d4bd4b887c82c5114aa98"
       }
     ]
   },
@@ -84,8 +84,8 @@
     "id": "605670941",
     "schemes": [
       {
-        "scheme": "baidufanyi:// ",
-        "shortcut": "https://www.icloud.com/shortcuts/5f29cd74e8b1478b86aa76f5269ba679"
+        "scheme": "baidufanyi://",
+        "shortcut": "https://www.icloud.com/shortcuts/ed0e97ffdcb44175bb58f9575a5ae111"
       }
     ]
   },
@@ -120,8 +120,8 @@
     "id": "1099174257",
     "schemes": [
       {
-        "scheme": "physicalfitness:// ",
-        "shortcut": "https://www.icloud.com/shortcuts/359bd178da4e4413ae04441f349cea44"
+        "scheme": "physicalfitness://",
+        "shortcut": "https://www.icloud.com/shortcuts/ba8245ae532947fcb41c5f52cb16c664"
       }
     ]
   },
@@ -129,8 +129,8 @@
     "id": "1034242836",
     "schemes": [
       {
-        "scheme": "shiftassistant:// ",
-        "shortcut": "https://www.icloud.com/shortcuts/096f99b87d524adf9cc2cca8113e8a21"
+        "scheme": "shiftassistant://",
+        "shortcut": "https://www.icloud.com/shortcuts/a5242b4ee39a4e6cb7a1278ea1093b76"
       }
     ]
   },
@@ -643,6 +643,15 @@
       {
         "scheme": "sy://",
         "shortcut": "https://www.icloud.com/shortcuts/af567668a0b7402d83171cbd11abb238"
+      }
+    ]
+  },
+  {
+    "id": "475666808",
+    "schemes": [
+      {
+        "scheme": "mlolapp://",
+        "shortcut": "https://www.icloud.com/shortcuts/70896428be634469a3d24ae36f6e6392"
       }
     ]
   }
