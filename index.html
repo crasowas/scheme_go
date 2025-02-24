@@ -1,50 +1,46 @@
+<!--
+  Copyright (c) 2025, crasowas.
+
+  Use of this source code is governed by a MIT-style license
+  that can be found in the LICENSE file or at
+  https://opensource.org/licenses/MIT.
+-->
+
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <base href="/">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <meta charset="UTF-8">
+    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+    <meta name="description"
+          content="Some publicly available URL Schemes and shared Shortcuts are used to trigger app launches.">
+    <meta name="keywords" content="URL Schemes">
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <!-- iOS meta tags & icons -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Scheme Go">
+    <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="Some publicly available URL Schemes and shared Shortcuts are used to trigger app launches.">
-  <meta name="keywords" content="URL Schemes">
+    <title>Scheme Go</title>
+    <link rel="manifest" href="manifest.json">
 
-  <!-- iOS meta tags & icons -->
-  <meta name="theme-color" content="#ffffff">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <meta name="apple-mobile-web-app-title" content="Scheme Go">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHQ54DXBEM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>Scheme Go</title>
-  <link rel="manifest" href="manifest.json">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QHQ54DXBEM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-QHQ54DXBEM');
-  </script>
+        gtag('config', 'G-QHQ54DXBEM');
+    </script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<script src="flutter_bootstrap.js" async></script>
 </body>
 </html>
