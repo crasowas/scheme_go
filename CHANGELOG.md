@@ -1,3 +1,6 @@
+## 1.0.3
+- Fix Safari font rendering issue.
+
 ## 1.0.2
 - Improve search placeholder text.
 - Add meta keywords.
