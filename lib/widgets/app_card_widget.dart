@@ -135,18 +135,12 @@ class AppCardWidget extends StatelessWidget {
         onTap: () {
           UrlLauncherUtil.openUrl(scheme.scheme);
         },
-        child: RichText(
-          text: TextSpan(
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              color: Colors.black87,
-            ),
-            children: <TextSpan>[
-              TextSpan(text: scheme.scheme.split(':')[0]),
-              TextSpan(text: ':', style: TextStyle(letterSpacing: 2.5)),
-              TextSpan(text: scheme.scheme.split(':')[1]),
-            ],
+        child: Text(
+          scheme.scheme,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.w500,
+            color: Colors.black87,
           ),
         ),
       ),
